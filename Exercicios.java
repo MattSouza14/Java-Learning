@@ -131,5 +131,126 @@ public class Exercicios {
 		System.out.printf("\nRETANGULO: %.3f", area5);
 
 
+		//7
+		int num;
+		
+		num = sc.nextInt();
+		
+		if (num < 0) {
+			System.out.println("Negativo");
+		}
+		else {
+			System.out.println("Não negativo");
+		}
+
+		//8
+		
+		int number;
+		
+		number = sc.nextInt();
+		
+		if (number % 2 ==0) {
+			System.out.println("Par");
+		}
+		else {
+			System.out.println("Impar");
+		}
+		//9
+
+		int numA, numB;
+		
+		numA = sc.nextInt();
+		numB = sc.nextInt();
+		
+		if (numA % numB ==0 || numB % numA == 0 ) {
+			System.out.println("Multiplos");
+		}
+		else {
+			System.out.println("Não multiplos");
+		}
+		
+		sc.close();
+
+		//10
+
+		int horaI, horaF;
+		
+		
+		horaI = sc.nextInt();
+		horaF = sc.nextInt();
+		int totalEvento;
+		
+		if (horaI < horaF) {
+			totalEvento = horaI - horaF;
+		}
+
+		else {
+			totalEvento = 24 - horaI + horaF;
+		}
+		System.out.println("O evento durou" + totalEvento);
+
+		//11
+		System.out.println("CODIGO\tESPECIFICAÇÃO\tPREÇO");
+		System.out.println("\n1\tCachorro Quente\tR$4.00");
+		System.out.println("\n2\tX-Salada\tR$4.50");
+		System.out.println("\n3\tX-Bacon\t\tR$5.00");
+		System.out.println("\n4\tTorrada simples\tR$2.00");
+		System.out.println("\n5\tRefrigerante\tR$1.00");
+		
+		double codProduto,qtd,valorTotal;
+		
+		codProduto = sc.nextInt();
+		qtd = sc.nextInt();
+		
+		if(codProduto == 1) {
+			valorTotal = 4.0 * qtd;
+			System.out.printf("Valor total: R$%.2f " , valorTotal);
+		}
+		else if(codProduto == 2) {
+			valorTotal = 4.5 * qtd;
+			System.out.printf("Valor total: R$%.2f " , valorTotal);
+		}
+		else if(codProduto == 3) {
+			valorTotal = 5.0 * qtd;
+			System.out.printf("Valor total: R$%.2f " , valorTotal);
+		}
+		else if(codProduto == 4) {
+			valorTotal = 2.0 * qtd;
+			System.out.printf("Valor total: R$%.2f " , valorTotal);
+		}
+		else if(codProduto == 5) {
+			valorTotal = 1.5 * qtd;
+			System.out.printf("Valor total: R$%.2f " , valorTotal);
+		}
+		else {
+			System.out.println("Codigo do produto invalido");
+		}
+		
+		//13
+		double x = sc.nextDouble();
+		double y = sc.nextDouble();
+		
+		if (x == 0.0 && y == 0.0) {
+			System.out.println("Origem");
+		}
+		else if (x == 0.0) {
+			System.out.println("Eixo Y");
+		}
+		else if (y == 0.0) {
+			System.out.println("Eixo X");
+		}
+		else if (x > 0.0 && y > 0.0) {
+			System.out.println("Q1");
+		}
+		else if (x < 0.0 && y > 0.0) {
+			System.out.println("Q2");
+		}
+		else if (x < 0.0 && y < 0.0) {
+			System.out.println("Q3");
+		}
+		else {
+			System.out.println("Q4");
+		}
+
 	}
 }

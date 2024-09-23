@@ -97,7 +97,7 @@ public class Exercicios {
 		total = (valor1 * numPecas1 + valor2 * numPecas2);
 		
 		System.out.printf("VALOR A PAGAR: %.2f", total);
-
+		System.out.printf("%d,%d", cod1, cod2);
 
 		// Fazer um programa que leia três valores com ponto flutuante de dupla precisão: A, B e C. Em seguida, calcule e
 		// mostre:
@@ -312,6 +312,31 @@ public class Exercicios {
 		System.out.printf("\n Alcool: %d", sumAlcool);
 		System.out.printf("\n Gasolina; %d", sumGasolina);
 		System.out.printf("\n Diesel: %d", sumDiesel);
+		//17
+		int numImpar = sc.nextInt();
+		
+		for(int i = 0; i <= numImpar; i++) {
+			if(i % 2 == 1) {
+				System.out.println(i);			
+			}
+		}
+
+		//18
+		int numIntervalo = sc.nextInt();
+		int in = 0;
+		int out = 0;
+		for(int i = 0; i < numIntervalo; i++) {
+			int entrada = sc.nextInt();
+			if(entrada>=10 && entrada <=20) {
+				in +=1;		
+			}
+			else {
+				out +=1;
+			}
+		}
+		System.out.printf("%d\n%d", in, out);
+
+		
 	}
 	
 }

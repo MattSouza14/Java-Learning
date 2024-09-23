@@ -251,6 +251,68 @@ public class Exercicios {
 		else {
 			System.out.println("Q4");
 		}
-
+		//14
+		int senhaValida = 2002;
+		
+		int senha = sc.nextInt();
+		
+		while(senhaValida != senha) {
+			System.out.println("Senha Invalida");
+			senha = sc.nextInt();
+		}
+		System.out.println("Acesso Permitido");
+		
+		//15
+		int X1 = sc.nextInt();
+		int Y1 = sc.nextInt();
+		
+		while(X1 != 0 && Y1 !=0) {
+			if(X1 > 0 && Y1 > 0) {
+				System.out.println("Primeiro");
+			}
+			else if(X1 > 0 && Y1 < 0) {
+				System.out.println("Quarto");
+			}
+			else if(X1 < 0 && Y1 < 0) {
+				System.out.println("Terceiro");
+			}
+			else if(X1 < 0 && Y1 > 0) {
+				System.out.println("Segundo");
+			}
+			else {
+				System.out.println(".");
+			}
+			X1 = sc.nextInt();
+			Y1 = sc.nextInt();
+		}
+		sc.close();
+		//16
+		System.out.println("\t\t Cod-Combustiveis");
+		System.out.println("\n\t [1]-Alcool\t[2]-Gasolina");
+		System.out.println("\n\t [3]-Diesel\t[4]-Fim");
+		
+		int codCombus = sc.nextInt();
+		int sumAlcool = 0;
+		int sumGasolina = 0;
+		int sumDiesel = 0;
+		
+		while(codCombus != 4 && codCombus > 0) {
+			if(codCombus == 1) {
+				sumAlcool += 1;
+			}
+			else if(codCombus == 2) {
+				sumGasolina += 1;
+			}
+			else if(codCombus == 3) {
+				sumDiesel +=1;
+			}
+			codCombus = sc.nextInt();
+		}
+		System.out.println("MUITO OBRIGADO");
+		System.out.printf("\n Alcool: %d", sumAlcool);
+		System.out.printf("\n Gasolina; %d", sumGasolina);
+		System.out.printf("\n Diesel: %d", sumDiesel);
 	}
+	
 }
+

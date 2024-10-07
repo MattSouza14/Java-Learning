@@ -38,8 +38,29 @@ public class POO {
 		else {
 			System.out.println("Maior area é Y");
 		}
-		sc.close();
 		
-	
+		//Object
+		//getClass - retorna o tipo do objeto
+		//equals - compara se o objeto é igual ao outro
+		//hashCode - retorna um codigo hash do objeto
+		//toString - converte o objeto para string
+		
+		//Membros Estáticos = membros de classe
+		//Chamados a partir do propio nome da classe
+
+		Calculator calc= new Calculator();
+			
+			System.out.println("Enter radius: ");
+			double radius = sc.nextDouble();
+			
+			double c = calc.circumference(radius);
+			double v = calc.volume(radius);
+			
+			System.out.printf("Circunferencia %2.f%n", c);
+			System.out.printf("Volume %2.f%n", v);
+			System.out.printf("PI %2.f%n", calc.PI);
+			
+			
+			sc.close();
 }
 }

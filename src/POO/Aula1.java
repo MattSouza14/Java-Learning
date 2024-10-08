@@ -1,6 +1,7 @@
 package src.POO;
 import java.util.Scanner;
 import entities.Triangulo;
+
 public class POO {
 
 	public static void main(String[] args) {
@@ -48,17 +49,17 @@ public class POO {
 		//Membros Estáticos = membros de classe
 		//Chamados a partir do propio nome da classe
 
-		Calculator calc= new Calculator();
+	
 			
-			System.out.println("Enter radius: ");
-			double radius = sc.nextDouble();
-			
-			double c = calc.circumference(radius);
-			double v = calc.volume(radius);
-			
-			System.out.printf("Circunferencia %2.f%n", c);
-			System.out.printf("Volume %2.f%n", v);
-			System.out.printf("PI %2.f%n", calc.PI);
+		System.out.println("Enter radius: ");
+		double radius = sc.nextDouble();
+		
+		double c = Calculator.circumference(radius);
+		double v = Calculator.volume(radius);
+		
+		System.out.printf("Circunferencia %2.f%n", c);
+		System.out.printf("Volume %2.f%n", v);
+		System.out.printf("PI %2.f%n", Calculator.PI);
 			
 			
 			sc.close();

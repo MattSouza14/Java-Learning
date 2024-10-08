@@ -46,6 +46,15 @@ public class ExerciciosPOO {
 	System.out.printf("PERIMETRO = %.2f%n", rect.perimeter());
 	System.out.printf("DIAGONAL = %.2f%n", rect.diagonal());
 	
-
+	System.out.println("Informe o valor do dolar: ");
+		double DolarValue = sc.nextDouble();
+	System.out.println("Informe quantos dolares ira comprar: ");
+		double DolarQuantity = sc.nextDouble();
+		
+		double Result =Conversor.DolarToReal(DolarValue, DolarQuantity);
+		
+	System.out.printf("O total a ser pago em R$ %.2f: ", Result);
+	System.out.println("Imposto: " + Conversor.IOF);
+	sc.close();
 
 }

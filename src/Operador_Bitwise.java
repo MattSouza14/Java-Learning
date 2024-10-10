@@ -28,3 +28,4 @@ public class Operador_Bitwise {
     }
 
 }
+//teste

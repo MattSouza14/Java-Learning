@@ -1,44 +1,21 @@
 import java.util.Scanner;
 
+import entities.Product;
 import entities.Triangulo;
 import util.Calculator;
 public class POO {
-
+    //private - o membro só pode ser acessado na própia classe
+//nada- o membro só pode ser acessado nas classes do mesmo pacote
+//protected - o membro só pode ser acessado no mesmo pacote, bem como em subclasse de pacotes diferentes
+//public - o membro é acessado por todas classes(ao menos que ele resida em um modulo diferente que não exporte
+//o pacote onde ele está
     public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
         //Classe -> tipo estruturado que pode contar (membros)
         //Atributos(dados/campos)
         //Metodos(funções/ operações
 
         //Construtores, Sobrecarga, Encapsulamento, Herança, Polimorfismo
-
-        Triangulo x,y;
-        //INSTANCIAÇÃO
-        x = new Triangulo();
-        y = new Triangulo();
-        Scanner sc = new Scanner(System.in);
-
-        System.out.println("Entre com os valores do triangulo x");
-        x.a = sc.nextDouble();
-        x.b = sc.nextDouble();
-        x.c = sc.nextDouble();
-        System.out.println("Entre com os valores do triangulo y");
-        y.a = sc.nextDouble();
-        y.b = sc.nextDouble();
-        y.c = sc.nextDouble();
-
-
-        double areaX = x.area();
-        double areaY = y.area();
-
-        System.out.printf("Area triangulo X: %.4f%n", areaX);
-        System.out.printf("Area triangulo Y: %.4f%n", areaY);
-
-        if (areaX > areaY) {
-            System.out.println("Maior area é X");
-        }
-        else {
-            System.out.println("Maior area é Y");
-        }
 
         //Object
         //getClass - retorna o tipo do objeto
@@ -49,24 +26,43 @@ public class POO {
         //Membros Estáticos = membros de classe
         //Chamados a partir do propio nome da classe
 
-
-
-
-        System.out.println("Enter radius: ");
-        double radius = sc.nextDouble();
-
-        double c = Calculator.circumference(radius);
-        double v = Calculator.volume(radius);
-
-        System.out.printf("Circunferencia %2.f%n", c);
-        System.out.printf("Volume %2.f%n", v);
-        System.out.printf("PI %2.f%n", Calculator.PI);
+        System.out.println("Enter product data: ");
+        System.out.print("Name: ");
+        String name = sc.nextLine();
+        System.out.print("Price: ");
+        double price = sc.nextDouble();
+        // System.out.print("Quantity in stock: ");
+        // int quantity = sc.nextInt();
+        //INSTANCIAÇÃO
+        Product product = new Product(name, price);
+        System.out.println();
+        System.out.println("Product data: " + product);
+        System.out.println();
+        System.out.print("Enter the number of products to be added in stock: ");
+        int quantity = sc.nextInt();
+        product.addProducts(quantity);
+        System.out.println();
+        System.out.println("Updated data: " + product);
+        System.out.println();
+        System.out.print("Enter the number of products to be removed from stock: ");
+        quantity = sc.nextInt();
+        product.removeProducts(quantity);
+        System.out.println();
+        System.out.println("Updated data: " + product);
 
 
         sc.close();
+
+        //Construtores - operação especial da classe que executa no momento da instanciação do objeto
+        //Sobrecarga - recurso que uma classe possui de oferecer mais de uma operação com o mesmo nome, porém com diferentes parâmetros
+        //Encapsulamento - consiste em esconder detalhes de implementação de uma classe, expondo apneas operações
+        //seguras e que mantenham os objetos em um estado consistente.
+
+
+
+
 
 
     }
 
 }
-//teste

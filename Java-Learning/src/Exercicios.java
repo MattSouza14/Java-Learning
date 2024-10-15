@@ -1,26 +1,57 @@
-import java.util.Scanner;
+package entities;
+
+public class Product {
+    //Atributos devem ser privados e devem ser acessados por meio de metodos get e set
+    private String name;
+    private double price;
+    private int quantity;
 
 
-import util.Conversor;
-
-public class Exercicios {
-
-    public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
-
-        System.out.println("Informe o valor do dolar: ");
-        double DolarValue = sc.nextDouble();
-        System.out.println("Informe quantos dolares ira comprar: ");
-        double DolarQuantity = sc.nextDouble();
-
-        double Result =Conversor.DolarToReal(DolarValue, DolarQuantity);
-
-        System.out.printf("O total a ser pago em R$ %.2f: ", Result);
-        System.out.println("Imposto: " + Conversor.IOF);
-        sc.close();
-
-
+    //THIS - referencia para o propio objeto(diferencia  atributos de variaveis locais)
+    public  Product(String name, double price, int quantity){
+        this.name = name;
+        this.quantity = quantity;
+        this.price = price;
     }
 
+    public  Product(String name, double price){
+        this.name = name;
+        this.price = price;
+
+    }
+    public double totalValueInStock() {
+        return price * quantity;
+    }
+    public void addProducts(int quantity) {
+        this.quantity += quantity;
+    }
+    public void removeProducts(int quantity){
+        this.quantity -= quantity;
+    }
+    public String toString() {
+        return name
+                +", $"
+                + String.format("%.2f", price)
+                + ", "
+                + quantity
+                + " units, Total : $ "
+                + totalValueInStock();
+    }
+
+    public void setName(String name){
+        this.name = name;
+    }
+    public String getName(){
+        return name;
+    }
+    public double getPrice(){
+        return price;
+    }
+    public void setPrice(double price){
+        this.price = price;
+    }
+    public int getQuantity(){
+        return quantity;
+    }
 }
 //teste

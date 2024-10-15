@@ -1,7 +1,8 @@
+import java.util.Locale;
 import java.util.Scanner;
 public class Estrutura_Sequencial {
     public static void main(String[] args) {
-        //Locale.setDefault(Locale.US);
+        Locale.setDefault(Locale.US);
         //Variaveis e tipos de dados
         //Declaração
         //tipo/nome/valor(opcional)

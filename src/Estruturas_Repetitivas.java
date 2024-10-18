@@ -19,6 +19,13 @@ public class Estruturas_Repetitivas {
         for(int i = 1; i <= y; i++) {
             System.out.printf("\n%d° oi", i);
         }
+        System.out.println(" ");
+        //ForEach
+        String[] vetForEach = new String[]{"Mateus", "Mateusinho", "Matt"};
+
+        for (String nomes : vetForEach){
+            System.out.println(nomes);
+        }
     }
 }
 //teste

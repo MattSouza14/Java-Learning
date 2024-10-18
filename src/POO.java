@@ -2,8 +2,8 @@ import java.util.Locale;
 import java.util.Scanner;
 
 import entities.Product;
-import entities.Triangulo;
-import util.Calculator;
+// import entities.Triangulo;
+// import util.Calculator;
 public class POO {
     //private - o membro só pode ser acessado na própia classe
 //nada- o membro só pode ser acessado nas classes do mesmo pacote

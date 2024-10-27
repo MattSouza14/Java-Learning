@@ -35,8 +35,35 @@ public class ExerciciosExtras {
                  }
             }
             System.out.println("Quantidade total de vogais = " +qtdVogais);
-        
+         //Fazer um programa que faça a criptografia de uma String para numeros
+         // ex: letra a -> 1 b-> 2....
 
-     }
+           System.out.println("Digite uma frase: ");
+           String texto = sc.nextLine().toLowerCase();
+           String resultado = criptoTexto(texto);
+           System.out.println("Frase criptografada: " + resultado);
     }
+           public static String criptoTexto(String cripto){
+               String fraseConvertida = "";
+               char[] vetFrase = cripto.toCharArray();
+               //mateus =1312052119
+               char[] letras = new char[]{
+                   'a','b','c','d','e','f','g','h',
+             'i','j','k','l','m','n','o','p',
+             'q','r','s','t','u','v','j','x',
+             'y','z'};
+     for (int i = 0; i < vetFrase.length; i++) {
+         for (int j = 0; j < letras.length; j++) {
+             if (vetFrase[i] == letras[j]) {
+                 fraseConvertida += (j + 1);
+                 break;
+             }
+         }
+     }
+
+     return fraseConvertida;
+ }
+
+}
+    
 

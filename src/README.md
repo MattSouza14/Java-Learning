@@ -1,4 +1,4 @@
-# Curso Java Completo: Java, UML, JDBC, JavaFX, Spring Boot, JPA, Hibernate, MySQL, MongoDB e muito mais
+# Curso Java Completo: Java, UML, JDBC, JavaFX, Spring Boot, JPA, Hibernate, MySQL
 
 Este repositório contém notas e exemplos de código relacionados aos tópicos que estou estudando e vou estudar em um curso completo de **Java** e tecnologias relacionadas.
 

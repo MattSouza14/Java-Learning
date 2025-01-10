@@ -69,11 +69,6 @@ public class ExerciciosPOO {
             }
 
 
-        //Faça uma classe ContaBancaria com métodos para depositar e sacar dinheiro, e exiba o
-        // saldo após as operações.
-
-        //Escreva uma classe Retângulo que receba largura e altura e tenha um método para
-        // calcular a área e outro para calcular o perímetro.
 
 
 

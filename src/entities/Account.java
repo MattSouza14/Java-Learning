@@ -1,19 +1,25 @@
 package entities;
+
+import model.exceptions.BusinessException;
+
+import java.io.IOException;
+
 public class Account {
 
     private int number;
     private String holder;
-    protected double balance;
+    private double balance;
+    private double withdrawLimit;
 
-    public Account(int number, String holder) {
-        this.number = number;
-        this.holder = holder;
+    public Account() {
+
     }
 
-    public Account(int number, String holder, double initialDeposit) {
+    public Account(Integer number, String holder, Double initialDeposit, Double withdrawLimit) {
         this.number = number;
         this.holder = holder;
-        deposit(initialDeposit);
+        this.withdrawLimit = withdrawLimit;
+        this.balance = initialDeposit;
     }
 
     public int getNumber() {
@@ -32,12 +38,29 @@ public class Account {
         return balance;
     }
 
+    public double getWithdrawLimit() {
+        return withdrawLimit;
+    }
+
+    public void setWithdrawLimit(double withdrawLimit) {
+        this.withdrawLimit = withdrawLimit;
+    }
     public void deposit(double amount) {
         balance += amount;
     }
 
     public void withdraw(double amount) {
-        balance -= amount + 5.0;
+        validateWithdraw(amount);
+        balance -= amount;
+    }
+
+    private void validateWithdraw(double amount) {
+        if (amount > getWithdrawLimit()) {
+            throw new BusinessException("Erro de saque: A quantia excede o limite de saque");
+        }
+        if (amount > getBalance()) {
+            throw new BusinessException("Erro de saque: Saldo insuficiente");
+        }
     }
 
     public String toString() {
@@ -45,6 +68,8 @@ public class Account {
                 + number
                 + ", Holder: "
                 + holder
+                + ", Withdraw Limit"
+                + withdrawLimit
                 + ", Balance: $ "
                 + String.format("%.2f", balance);
     }

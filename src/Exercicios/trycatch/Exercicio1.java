@@ -1,4 +1,4 @@
-package Exercicios;
+package Exercicios.trycatch;
 
 import entities.Resevation;
 import model.exceptions.DomainException;
@@ -8,7 +8,7 @@ import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.Scanner;
 
-public class trycatchExercicios {
+public class Exercicio1 {
 
 public static void main(String[] args) {
 Scanner sc = new Scanner(System.in);

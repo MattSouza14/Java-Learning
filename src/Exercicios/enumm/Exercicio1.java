@@ -1,4 +1,4 @@
-package Exercicios;
+package Exercicios.enumm;
 
 import entities.*;
 
@@ -8,7 +8,7 @@ import java.util.Date;
 import java.util.Locale;
 import java.util.Scanner;
 
-public class ExerciciosEnum {
+public class Exercicio1 {
     public static void main(String[] args) throws ParseException {
         Locale.setDefault(Locale.US);
         Scanner sc = new Scanner(System.in);

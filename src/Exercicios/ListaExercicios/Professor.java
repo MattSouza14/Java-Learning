@@ -6,6 +6,7 @@ public class Professor extends Funcionario {
     }
     public Professor(int matricula, double salario, String nome, String sobrenome){
         super(matricula, salario, nome, sobrenome);
+
     }
 
 
@@ -14,8 +15,10 @@ public class Professor extends Funcionario {
         return getSalario();
     }
 
-    public double getSalarioSegundParcela(){
+    @Override
+    public double getSalarioSegundaParcela() {
         return 0.0;
     }
+
 
 }

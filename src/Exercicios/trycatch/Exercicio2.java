@@ -1,10 +1,12 @@
 package Exercicios.trycatch;
 
-import entities.Account;
 import model.exceptions.BusinessException;
 
 import java.io.IOException;
 import java.util.Scanner;
+
+import Udemy.OrientacaoAObjetos.entities.Account;
+
 import java.text.ParseException;
 
 public class Exercicio2 {

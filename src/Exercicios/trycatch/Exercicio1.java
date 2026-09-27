@@ -1,12 +1,13 @@
 package Exercicios.trycatch;
 
-import entities.Resevation;
 import model.exceptions.DomainException;
 
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.Scanner;
+
+import Udemy.OrientacaoAObjetos.entities.Resevation;
 
 public class Exercicio1 {
 

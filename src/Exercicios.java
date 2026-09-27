@@ -1,10 +1,10 @@
-import entities.Emplyoee;
-import entities.Rent;
-
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Locale;
 import java.util.Scanner;
+
+import Udemy.OrientacaoAObjetos.entities.Emplyoee;
+import Udemy.OrientacaoAObjetos.entities.Rent;
 
 public class Exercicios {
     public static void main(String[] args) {

@@ -1,10 +1,10 @@
 package Exercicios.poo;
 
-import entities.Acervo;
-import entities.Book;
-
 import java.util.Locale;
 import java.util.Scanner;
+
+import Udemy.OrientacaoAObjetos.entities.Acervo;
+import Udemy.OrientacaoAObjetos.entities.Book;
 
 public class Exercicio3 {
     public static void main(String[] args) {

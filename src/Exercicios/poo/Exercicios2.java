@@ -1,9 +1,9 @@
 package Exercicios.poo;
 
-import entities.Carro;
-
 import java.util.Locale;
 import java.util.Scanner;
+
+import Udemy.OrientacaoAObjetos.entities.Carro;
 
 public class Exercicios2 {
     public static void main(String[] args) {

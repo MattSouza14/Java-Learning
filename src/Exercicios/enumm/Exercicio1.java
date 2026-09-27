@@ -1,12 +1,12 @@
 package Exercicios.enumm;
 
-import entities.*;
-
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.Locale;
 import java.util.Scanner;
+
+import Udemy.OrientacaoAObjetos.entities.*;
 
 public class Exercicio1 {
     public static void main(String[] args) throws ParseException {

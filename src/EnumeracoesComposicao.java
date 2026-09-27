@@ -1,8 +1,8 @@
-import entities.Comment;
-import entities.Post;
-
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
+
+import Udemy.OrientacaoAObjetos.entities.Comment;
+import Udemy.OrientacaoAObjetos.entities.Post;
 
 public class EnumeracoesComposicao {
 //Enumerações: tipo especial que serva para especificar de forma literal um conjunto de constantes
